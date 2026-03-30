@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pattern Generator</title>
+    <style>
+        body {
+            font-family: monospace;
+            text-align: center;
+            margin-top: 40px;
+        }
+        input, button {
+            padding: 8px;
+            margin: 5px;
+        }
+        pre {
+            background: black;
+            color: white;
+            padding: 15px;
+            display: inline-block;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Pattern Generator</h2>
+
+    Symbol: <input type="text" id="symbol"><br>
+    Rows: <input type="number" id="rows"><br><br>
+
+    <button onclick="rightFull()">Right Full</button>
+    <button onclick="fullPyramid()">Full Pyramid</button>
+
+    <br><br>
+
+    <pre id="output"></pre>
+
+    <script>
+
+        function rightFull() {
+            let s = document.getElementById("symbol").value;
+            let r = parseInt(document.getElementById("rows").value);
+            let res = "";
+
+            for(let i = r; i >= 1; i--) {
+                for(let j = 1; j <= i; j++) {
+                    res += s + " ";
+                }
+                res += "\n";
+            }
+
+            document.getElementById("output").innerText = res;
+        }
+
+        function fullPyramid() {
+            let sym = document.getElementById("symbol").value;
+            let rows = parseInt(document.getElementById("rows").value);
+            let res = "";
+
+            let s = 10;  // SAME as your Java code
+
+            for (let i = 1; i <= rows; i++) {
+
+                for (let k = 1; k <= s; k++) {
+                    res += " ";
+                }
+
+                for (let j = 1; j <= i; j++) {
+                    res += sym + " ";
+                }
+
+                res += "\n";
+                s--;
+            }
+
+            document.getElementById("output").innerText = res;
+        }
+
+    </script>
+
+</body>
+</html>
