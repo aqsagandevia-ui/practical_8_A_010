@@ -1,6 +1,6 @@
 # Pattern Generator
 
-## ▶️ Run Project (Click Below)
+## ▶️ Run Programs (Click Below)
 
 👉 https://aqsagandevia-ui.github.io/practical_8_A_010/
 
